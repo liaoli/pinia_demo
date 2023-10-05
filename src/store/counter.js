@@ -10,7 +10,7 @@ export const useCounterStore = defineStore('counter', () => {
     const minusCount = () => {
         count.value--
     }
-    const double = computed(() => {
+    const doubleCount = computed(() => {
         return count.value * 2
     })
 
@@ -20,7 +20,7 @@ export const useCounterStore = defineStore('counter', () => {
         count,
         addCount,
         minusCount,
-        double,
+        doubleCount,
         msg
     }
-})
+}, { persist: true })
